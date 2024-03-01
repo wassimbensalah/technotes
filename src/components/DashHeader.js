@@ -30,10 +30,10 @@ const DashHeader = () => {
         if (isSuccess) navigate('/')
     }, [isSuccess, navigate])
 
-    const onNewNoteClicked = () => navigate('dash/notes/new')
-    const onNewUserClicked = () => navigate('dash/users/new')
-    const onNotesClicked = () => navigate('dash/notes')
-    const onUsersClicked = () => navigate('dash/users')
+    const onNewNoteClicked = () => navigate('notes/new')
+    const onNewUserClicked = () => navigate('users/new')
+    const onNotesClicked = () => navigate('notes')
+    const onUsersClicked = () => navigate('users')
 
     let dashClass = null
     if (!DASH_REGEX.test(pathname) && !NOTES_REGEX.test(pathname) && !USERS_REGEX.test(pathname)) {
