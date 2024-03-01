@@ -9,7 +9,10 @@ import { useLoginMutation } from './authApiSlice'
 
 import usePersist from '../../hooks/usePresist'
 
+import useTitle from '../../hooks/useTitle'
+
 const Login = () => {
+    useTitle('Employee Login')
     const userRef = useRef()
     const errRef = useRef()
     const [username, setUsername] = useState('')
