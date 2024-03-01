@@ -38,11 +38,13 @@ const Login = () => {
         e.preventDefault()
         try {
             const { accessToken } = await login({ username, password }).unwrap()
+            
             dispatch(setCredentials({ accessToken }))
             setUsername('')
             setPassword('')
             navigate('/dash')
         } catch (err) {
+            console.log('ERROR:', err);
             if (!err.status) {
                 setErrMsg('No Server Response');
             } else if (err.status === 400) {
